@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+}
+
+h1,h2{
+    position: relative;
+    z-index: 1;
+    padding-top:20px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+
+.choose{
+    margin: auto;
+}
+.choose img{
+    margin: 60px;
+    position: relative;
+    transition: 1s;
+    width: 200px;
+    height: auto;
+}
+.choose img:hover{
+    transform: rotate(720deg) scale(1.5);
+    transition: 2s;
+}
+
+.spin img{
+    transition: 10s;
+    display: block;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    top: 200px;
+}
+.spin img:hover{
+    transform: rotate(23040deg);
+    transition: 15s;
+}
+
+.page{
+    width: 100%;
+    height: 100vh;
+}
