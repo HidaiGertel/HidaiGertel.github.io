@@ -34,11 +34,6 @@ a{
     height: auto;
 }
 
-.choose img:hover{
-    transform: scale(1.5);
-    transition: 0.5s;
-}
-
 .spin img{
     transition: 10s;
     display: block;
