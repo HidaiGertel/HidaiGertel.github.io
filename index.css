@@ -139,8 +139,8 @@ h1{
     transform-origin: right;
 }
 p{
-    padding-left: 20px;
-    padding-right: 40px;
+    padding-left: 40px;
+    padding-right: 20px;
     padding-bottom: 120px;
     padding-top: 120px;
     font-family: "Lato";
