@@ -37,7 +37,7 @@
         </p><h1>Course</h1><br ></div>
         <div class="page page3" id="p3"><div class="rside"><p><span class="questions">How to register for the next study cycle?</span><br><br>
         Simply fill out this form (or send us an email):</p><br>
-        <form autocomplete="on" action="mailto:hidai.gertel@gmail.com" method="post" enctype="text/plain"><br>
+        <form id="gform" autocomplete="on" action="https://script.google.com/macros/s/AKfycbzL3poFMz0ioY6UW0Dzk53ht9Ov_DAaEEfUeTuMsEnFshpi8ULg/exec" method="post"><br>
           First name:<br>
   <input required type="text" name="firstname"><br>
   Last name:<br>
@@ -58,16 +58,17 @@ Laptop OS, and preferred browser:<br>
     <option value="Internet Explorer">
     <option value="Firefox">
     <option value="Opera">
-</datalist><br>Availbility:<br><input type="checkbox" name="time" value="t3">Thursday 3pm
-<input type="checkbox" name="time" value="s3">Saturday 3pm<br>
-<input type="checkbox" name="time" value="t6">Thursday 6pm
-<input type="checkbox" name="time" value="s6">Saturday 6pm<br>
+</datalist><br>Availbility:<br><input class="n" type="checkbox" name="time" value="t3">Thursday 3pm
+<input class="n" type="checkbox" name="time" value="s3">Saturday 3pm<br>
+<input class="n" type="checkbox" name="time" value="t6">Thursday 6pm
+<input class="n" type="checkbox" name="time" value="s6">Saturday 6pm<br>
 Comment:<br>
 <input type="text" name="comment" size="47"><br><br>
 <input type="submit" value="Send">
 <input type="reset" value="Reset">     
-        </form>
+        </form><div style="text-align: center; font-size:30px; display: none;" class="questions" id="thankyou_message">Thank you, We will contact you soon!</div>
         </div><h1>Contact</h1><br ></div>
-
+<script data-cfasync="false" type="text/javascript"
+src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
     </body>
     </html>
