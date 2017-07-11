@@ -22,11 +22,12 @@ body{
 }
 
 a {    color: inherit;}
-a.main {
+.main {
 
     text-decoration: none;
     min-width: 15%;
     display: inline-block;
+/*    font-variant: small-caps;*/
 }
 
 a:hover{
@@ -36,7 +37,7 @@ a:hover{
 
 a:hover .bigc{
     color: transparent;
-    text-shadow: 0px 0px 1px deepskyblue;
+    text-shadow: 0px 0px 1px black;
     font-weight: bold;
 }
 
@@ -59,7 +60,8 @@ a:hover .bigc{
     line-height: 70px;
     position: relative;
     z-index: 4;
-    font-weight: bold;
+    color: deepskyblue;
+    font-variant: small-caps;
 }
 .topmenu{
     overflow: visible;
@@ -97,6 +99,7 @@ a:hover .bigc{
     z-index: 0; 
     transition: 0.4s;
     border-bottom-right-radius: 10px;
+    font-variant: small-caps;
 }
 
 .cover{
@@ -179,10 +182,14 @@ form{
 
 
 .lside{float: left; border-right: solid;}
-.rside{float: right; border-left: solid;
+.rside{float: right;
+    border-left: solid;
     padding-bottom: 120px;
     padding-top: 30vh;
     width: 50%;
     background-color: white;
     min-height: 100vh;
 }
+
+.button{box-shadow: 1px 1px gray;}
+.button:active{box-shadow: -1px -1px gray;}
