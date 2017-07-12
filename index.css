@@ -171,9 +171,11 @@ input{
     margin: 10px;
     padding: 10px;
     border: solid 1px gray;
+
 }
 
 input:not(.n){box-shadow: -1px -1px 1px gray;}
+input:not(.button){    border-radius: 100px;}
 
 form{
     margin:10px;
@@ -192,7 +194,7 @@ form{
     min-height: 100vh;
 }
 
-.button{box-shadow: 1px 1px gray;}
+.button{box-shadow: 1px 1px gray; border-radius: 5px;}
 .button:active{box-shadow: -1px -1px gray;}
 
 #p1,#p2,#p3 {
