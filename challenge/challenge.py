@@ -40,7 +40,7 @@ def main():
   # assume errors are normally distributed
   y = p(x[-1])
   e_std = 0.806971545855 # as observed in training
-  sys.stdout.write(str(norm.ppf(12.5-y, loc=0, scale=e_std)*100)+' %\n')
+  sys.stdout.write(str(norm.ppf(y-12.5, loc=0, scale=e_std)*100)+' %\n')
   
 
 if __name__ == '__main__':
