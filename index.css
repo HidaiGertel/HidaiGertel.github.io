@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+a {color: inherit;}
+
+a:hover{
+    text-shadow: 0px 0px 1px black;
+    
+}
+
+body{
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.ball{
+    position: fixed;
+    top: 90vh;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    transform: translate(-7.5px,-8px);
+    border-left: solid whitesmoke;
+    border-right: solid black;
+    border-radius: 10px;
+    z-index: 1;
+}
+.title{
+    font-size: 50px;
+    background-color: whitesmoke;
+    line-height: 70px;
+    position: relative;
+    z-index: 4;
+/*    color: deepskyblue;*/
+    font-variant: small-caps;
+}
+.main {
+    text-decoration: none;
+    min-width: 18%;
+    display: inline-block;
+}
+
+.questions{ 
+    padding-top: 60px;
+    padding-bottom: 25px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 25px;
+    color: deepskyblue;
+    font-variant: small-caps;
+    display: block;
+}
+
+
+.topmenu{
+    line-height: 50px;
+    position: sticky;
+    top: 0;
+    background-color: whitesmoke;
+    z-index: 3;
+    box-shadow: 0px 0px 4px black;   
+}
+
+.examples{
+    position: relative;
+}
+/*if mobile dont display*/
+
+.exlink{
+    background-color: whitesmoke;
+    position: relative;
+    display: block;
+    z-index: 2;
+}
+.exs{    
+    background-color: whitesmoke;
+    display: block;
+    position: absolute;
+    width: 92%;
+    box-shadow: 0px 0px 4px black;
+    top: 49px;
+    transform: translate(0,-110%);
+    left: 4px;
+    z-index: 0; 
+    transition: 0.4s;
+    border-bottom-right-radius: 10px;
+    font-variant: small-caps;
+}
+.cover{
+    height: 0.5px;   
+    position: absolute;
+    width: 94%;
+    top: 49px;
+    left:3px;
+    box-shadow: 0px 0px 4px black, 0px 0px 4px black;
+    z-index: 1;
+    opacity: 0;
+    transition: 1s;
+}
+.examples:hover .exs{transform: none}
+.examples:hover .cover{opacity: 1; transition: 0s;}
+
+#p1,#p2,#p3 {
+   position: relative;
+    top: -50px;
+}
+
+.page{
+    background-attachment: fixed;
+    background-size: 50% auto;
+    text-align: right;
+}
+
+.page1{
+    background-image: url(pexels-photo-220210.jpeg);
+}
+
+.page2{
+    background-image: url(ballet-sneaker-dress-ballet-dancer-163379.jpeg);
+}
+
+.page3{
+    background-image: url(people-coffee-tea-meeting.jpg);    
+}
+
+h1{
+    text-align: center;
+    clear: left;
+    float: left;
+    line-height: 100px;
+    width: 50%;
+    background-color: white;
+    font-size: 40px;
+    color: transparent;
+    text-shadow: 0px 0px 1px black;
+    opacity: 0.9;
+    border-radius: 50px;
+}
+
+.rside{
+    
+    text-align: justify;
+    display: inline-block;
+    width: 50%;
+    min-height: 100vh;
+    background-color: white;
+    border-left: solid whitesmoke;
+    padding-top: 10vh;
+    
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+li {
+    padding-top:25px;
+}
+
+ul {
+    padding-bottom: 25px;
+}
+
+input{
+    margin-bottom: 10px;
+}
+form{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: solid 1px;
+    border-radius: 6px;
+    padding: 20px;}
+
+.button{
+    border-radius: 50px;
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-left: 30px;
+}
+.button:active{box-shadow: -1px -1px gray;}
+
+.n, .n2{margin-right: 10px;}
+
+.n2{margin-left: 70px;}

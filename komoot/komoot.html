@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>kommot search tips</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            function searchWord() {
+                $("#theList").remove();
+                $.getJSON( "data.json", function( data ) {
+                    var wordCounts = {}, input, word, items = []; 
+                    input = document.getElementById('searchInput');
+                    word = input.value.toUpperCase();
+                    $.each( data, function( key, val ) {
+                        var text, highlight;
+                        text = val["text"];
+                        highlight = val["_links"]["highlight"]["href"];
+                        highlight = highlight.substr(highlight.length - 6);
+                        if (text.toUpperCase().indexOf(word) > -1) {
+                            wordCounts[highlight] = (wordCounts[highlight] || 0) + 1;
+                        }
+                    });
+                    $.each( wordCounts, function( key, val ) {
+                        items.push( "<li style='order: " + val + "'><a target='frame' href='https://www.komoot.com/highlight/" + key + "'>" + val + " result/s found at highlight #" + key + "</a></li>" );
+                    });
+                    $( "<ul/>", {
+                        "id": "theList",
+                        html: items.join( "" )
+                    }).appendTo( "#results" );  
+                });
+            }
+        </script>
+        <style>
+            #results {
+                background-color: #383838;
+                height: 130px;
+                overflow-y: scroll;
+            }
+            iframe {
+                border: none;
+                display: block;
+                width: 100%;
+                height: 70vh;
+            }
+            ul {
+                margin: 0;
+                display: flex;
+                flex-direction: column-reverse;
+                list-style: none;
+            }
+            #searchInput {
+                font-size: 16px;
+                padding: 12px 20px 12px 40px;
+                border: 1px solid #ddd;
+                margin-bottom: 12px;
+            }
+            #searchIcon {
+                height: 35px;
+                vertical-align: middle;
+            }
+
+            a {
+                display: inline-block;
+                width: 300px;
+                box-shadow: 0px 1px 0px 0px #1c1b18;
+                background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
+                border-radius:15px;
+                color:#505739;
+                font-weight:bold;
+                padding: 6px 0px;
+                text-decoration:none;
+                text-shadow:0px 1px 0px #ffffff;
+                margin-top: 10px;
+            }
+            a:hover {
+                background:linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
+            }
+            a:active {
+                position:relative;
+                top:1px;
+            }
+        </style>
+    </head>
+    <body style="text-align: center;">
+        <input type="text" id="searchInput" placeholder="Search in TIPS...">
+        <input type="image" id="searchIcon" src="searchicon.png" onclick="searchWord()"/>
+        <div id="results"></div>
+        <iframe name="frame" id="frame" src="https://www.komoot.com/"></iframe>
+    </body>
+</html>
