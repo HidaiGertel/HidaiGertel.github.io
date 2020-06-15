@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    overflow: scroll;
+}
+.page1 {
+    overflow: auto;
+}
+.ad {
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    float: right;
+    display: none;
+}
+.header, .page2{
+    text-align: center;
+}
+h1 {
+    margin-top: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;    
+}
+h2 {
+    padding-top: 0;
+    margin-top: 0;
+    text-indent: 6em;
+}
+#totop {
+    position: fixed;
+    top: 0;
+    display: none;
+    margin: auto;
+    font-size: 1.2em;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+.tab {
+    display: none;
+}
+.tab:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.tab.selected {
+    display: block;
+}
+.tab.notselected {
+    display: none;
+}
+.tabi {
+    line-height: 1.4;
+    position: relative;
+    width: 50%;
+    float: left;
+    padding: 1em;
+}
+input {
+}
+#reader {
+    font-size: 2em;
+    color: white;
+    padding: 1em;
+}
+.page1, .topmenu, .controls {
+    background-color: white;
+}
+.topmenu {
+    padding-top: 4em;
+}
+.controls {
+    padding-top: 1em;
+    padding-bottom: 4em;
+}
+p{
+    text-align: left;
+}
+.colored {
+    font-family: "Open Sans";
+}
+.colored p{
+    background-color: lightblue;
+    border-radius: 1em;
+    padding: 0.2em 1em;
+    color: black;
+}
+.colored .tabi:nth-child(2) p{
+    background-color: mediumorchid;
+}

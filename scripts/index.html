@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TranScript</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="page1">
+            <div class="ad"></div>
+            <div class="header">
+                <h1>TranScript</h1><h2>@ scripts.de</h2>
+            </div>
+        </div>
+        <div class="page2">
+            <button id="totop" class="sticky" type="button" onclick="scrollToTop()">Back to top</button>
+            <div class="topmenu">
+                <label for="files">Add files (.srt): </label><span style="display:inline-block; width: 3em;"></span>
+                <input type="file" id="files" onchange="openFile(event)" multiple><br><br>
+                <button type="button" onclick="clearTabs()">clear</button>
+                <button type="button" onclick="switchTabs()">switch</button>
+            </div>
+            <div class="controls">
+                <button type="button" onmousedown="sync(0.5)">sync +</button>
+                <button type="button" onmousedown="sync(-0.5)">sync -</button><span style="display:inline-block; width: 5em;"></span>
+                <label for="size">size</label>
+                <input type="range" id="size" min="0.5" max="5" step="0.1" value="2" onchange="changeSize(this.value)" ><span style="display:inline-block; width: 5em;"></span>
+                <input type="checkbox" id="colors" onchange="addColors(this)" >
+                <label for="Colors">color</label>
+            </div>
+            <div id="reader">
+                <div class="tab selected" id="tab1"></div>
+                <!--<div class="tab notselected" id="tab2"></div>-->
+            </div>
+        </div>
+        <script src="tranScript.js"></script>
+    </body>
+</html>
+
+<!-- add titles and/or tags and/or tooltips -->
