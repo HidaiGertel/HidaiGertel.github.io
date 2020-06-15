@@ -63,7 +63,8 @@ input {
 #reader {
     font-size: 2em;
     color: white;
-    padding: 1em;
+    padding-top: 1em;
+    padding-left: 2em;
 }
 .page1, .topmenu, .controls {
     background-color: white;
