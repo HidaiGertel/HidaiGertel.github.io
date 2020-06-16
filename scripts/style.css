@@ -3,7 +3,9 @@
 }
 body {
     margin: 0;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: system-ui, sans-serif;
 }
 .page1 {
     overflow: auto;
@@ -21,12 +23,7 @@ body {
 h1 {
     margin-top: 2em;
     padding-bottom: 0;
-    margin-bottom: 0;    
-}
-h2 {
-    padding-top: 0;
-    margin-top: 0;
-    text-indent: 6em;
+    margin-bottom: 0;
 }
 #totop {
     position: fixed;
@@ -58,8 +55,6 @@ h2 {
     float: left;
     padding: 1em;
 }
-input {
-}
 #reader {
     font-size: 2em;
     color: white;
@@ -69,19 +64,23 @@ input {
     background-color: white;
 }
 .topmenu {
-    padding-top: 4em;
+    padding-top: 5em;
 }
 .controls {
     padding-top: 1em;
-    padding-bottom: 4em;
+    padding-bottom: 1em;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 3;
 }
-p{
+p {
     text-align: left;
 }
 .colored {
     font-family: "Open Sans";
 }
-.colored p{
+.colored p {
     background-color: lightblue;
     border-radius: 1em;
     padding: 0.2em 1em;
@@ -89,4 +88,21 @@ p{
 }
 .colored .tabi:nth-child(2) p{
     background-color: mediumorchid;
+}
+
+button, ::-webkit-file-upload-button {
+    text-transform: none;
+    -webkit-appearance: button;
+    font-family: system-ui, sans-serif;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+}
+label {
+    text-transform: none;
+    font-family: system-ui, sans-serif;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
 }
