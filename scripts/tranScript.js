@@ -37,7 +37,7 @@ function addTabi(text) {
         newP.style.position = 'absolute';
         newP.style.top = (location * 2.5) + 'em';
         newDiv.appendChild(newP);
-        newDiv.style.height = '100px';
+        newDiv.style.height = '100em';
         if(first == -1)
             first = my_first;
         else {
